@@ -13,3 +13,10 @@ The script uses **Invoke-WebRequest** cmdlet and downloads each file separately.
 
 You can download the script and enhance it per your requirements.
 
+## Script syntax
+Open PowerShell and select location where you want Azure Documentation to be dowloaded to. Then run:
+Get-AzureDocs.ps1 [-folderName <FolderName>]
+
+-folderName
+Name of the subfolder which documents are downloaded to. Folder can already exist. If it does not exist new folder is created.
+Parameter is not mandatory. If you ommit this parameter, script uses its default value which is current date in 'yyyy-MM-dd' format (ie. '2018-08-16').
