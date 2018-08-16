@@ -15,6 +15,7 @@ You can download the script and enhance it per your requirements.
 
 ## Script syntax
 Open PowerShell and select location where you want Azure Documentation to be dowloaded to. Then run:
+
 Get-AzureDocs.ps1 [-folderName <FolderName>]
 
 -*folderName*
