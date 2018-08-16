@@ -9,7 +9,7 @@ Kudos to Michael for providing URIs required for download.
 
 I wanted to make it possible to run it in PowerShell and since I have not found any existing published scripts, I decided to make it my first GitHub repo.
 
-The script uses Invoke-WebRequest cmdlet and downloads each file separately.
+The script uses **Invoke-WebRequest** cmdlet and downloads each file separately.
 
 You can download the script and enhance it per your requirements.
 
