@@ -21,7 +21,12 @@ $githubUri = "https://api.github.com/repositories/72685026/contents/articles"
 $azureUri = "https://docs.microsoft.com/pdfstore/en-us/Azure.azure-documents/live/"
 
 # Create a new directory for downloaded files in form of current date if it does not already exist.
-if (!(Test-Path -Path ".\$folderName" )) {New-Item -ItemType "directory" -Name $folderName}
+if (!(Test-Path -Path ".\$folderName" )) {
+    New-Item -ItemType "directory" -Name $folderName
+}
+Else {
+    Write-Host "Target folder already exists. Azure Document files will be downloaded into existing folder." -ForegroundColor Yellow
+}
 
 # Set security protocol to support TLS 1.2 as PowerShell defaults to TLS 1.0
 $securityProtocol = "tls12, tls11, tls"
