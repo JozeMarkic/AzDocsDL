@@ -3,7 +3,7 @@ Microsoft hosts Azure documentation on https://docs.microsoft.com/en-us/azure/. 
 
 ![Screenshot](Docs/Images/WindowsVMDocPDFDL2MP.jpg)
 
-You can download documentation separately using download links. But sometimes there is a need to download ALL Azure documents to mantain it for offline reference.
+You can download Azure PDF document separately using a download link ('Download PDF'). But sometimes there is a need to download ALL Azure documents to mantain it for offline reference.
 I found a nice one-liner from Michael Crump - [Azure Tips and Tricks Part 128 - Download all Azure Documentation for offline viewing](https://www.michaelcrump.net/azure-tips-and-tricks128/)) - but Windows Subsystem for Linux (WSL) is required to run it on Windows.
 Kudos to Michael for providing URIs required for download.
 
