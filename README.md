@@ -33,3 +33,5 @@ Parameter is optional. If not specified, all documents listed in 'githubUri' loc
 ## Example
 
 Get-AzureDocs.ps1 -folderName "AzureDocsVM" -Mode "download" -Filter "virtual-machine"
+
+In this example, Azure Document files that include 'virtual-machine' in their name are downloaded into folder 'AzureDocsVM'.
