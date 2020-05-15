@@ -32,8 +32,9 @@ Param(
 ) 
 
 # Initialize variables
-$githubUri = "https://api.github.com/repositories/72685026/contents/articles"
-$azureUri = "https://docs.microsoft.com/pdfstore/en-us/Azure.azure-documents/live/"
+$start_time = Get-Date
+$githubUri = "https://api.github.com/repos/MicrosoftDocs/azure-docs/contents/articles"
+$azureUri = "https://docs.microsoft.com/en-us/azure/opbuildpdf/"
 
 # Set security protocol to support TLS 1.2 as PowerShell defaults to TLS 1.0
 $securityProtocol = "tls12, tls11, tls"
@@ -59,7 +60,7 @@ if($Mode -eq "download") {
     foreach($AzureDocFile in $AzureDocFiles) {
         $AzureDocFileName = $AzureDocFile.name + ".pdf"
         $AzureDocFileOutPath = ".\$folderName\$AzureDocFileName"
-        $AzureDocFileUri = $azureUri + $AzureDocFileName
+        $AzureDocFileUri = $azureUri +  $AzureDocFile.name + "/toc.pdf?branch=live"
 
         Write-Host "Downloading file $AzureDocFileName" -ForegroundColor Green
 
@@ -77,3 +78,4 @@ elseif ($Mode -eq "list") {
     Write-Host "Available Azure Document files:"
     $AzureDocFiles.name
 }
+Write-Output "Total download time: $((Get-Date).Subtract($start_time).TotalMinutes.ToString('#.##')) minute(s)"
